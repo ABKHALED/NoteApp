@@ -1,0 +1,135 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.holder{
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px 0;
+  background-color: white;
+}
+.holder.dark{
+  background-color: black;
+}
+.holder .header{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.holder .header h1{
+  font-weight: bold;
+}
+.holder.dark .header h1{
+  color: white;
+}
+.holder .header button{
+  padding: 8px 30px ;
+  border: none;
+  background-color: #ddd;
+  border-radius: 20px;
+  font-weight: bold;
+}
+.notes-holder{
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(250px, 1fr));
+  gap: 30px;
+}
+.notes-holder .adder{
+  width: 100%;
+  background-color: #03a9f4;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.notes-holder .adder textarea{
+  width: 100%;
+  border: none;
+  height: 200px;
+  padding: 10px 0 0 10px;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+  font-size: 17px;
+}
+.notes-holder .adder textarea::placeholder{
+  color: #555;
+}
+.clear{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-top: 20px;
+  margin-right: 10px;
+  background-color: #8bc34a;
+  display: grid;
+  place-items: center;
+  color: white;
+  cursor: pointer;
+}
+.adder .footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 0px 10px;
+  margin-top: 10px;
+}
+.adder .footer p{
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+}
+.adder .footer button{
+  padding: 4px 15px ;
+  border:none;
+  border-radius: 20px;
+  font-weight: bold;
+}
+.nt{
+  width: 100%;
+  background-color: #ffc107;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.nt textarea{
+  width: 100%;
+  border: none;
+  height: 200px;
+  padding: 10px 0 0 10px;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+  font-size: 17px;
+}
+.nt .footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px 22px;
+}
+.nt .footer p{
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+}
+.nt .footer .mod{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nt .footer .delet,
+.nt .footer .edit{
+  cursor: pointer;
+}
+.nt .footer .delet svg{
+  color: red;
+}
+.nt .footer .edit svg{
+  color: green;
+}
